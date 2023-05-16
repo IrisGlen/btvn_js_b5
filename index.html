@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BTVN B5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+    </header>
+    <main>
+      <!-- bai 1 -->
+      <!-- <div class="container">
+        <h2>B1: Tính tiền lương nhân viên</h2>
+        <div class="mb-3">
+          <label for="soNgay" class="form-label"
+            >Nhập số ngày (lương mỗi ngày = 100.000)</label
+          >
+          <input type="text" class="form-control" id="soNgay" />
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-danger" onclick="tinhLuong()">
+            Tính lương
+          </button>
+        </div>
+        <div class="mb-3">
+          <div class="bg-danger text-white soNgay py-2 px-2"></div>
+        </div>
+      </div> -->
+
+      <!-- bai 1 -->
+      <div class="container while">
+        <h2>Bai 1: Quản lý tuyển sinh</h2>
+        <div class="mb-3">
+          <label for="" class="mx-4">Diem chuan</label>
+          <select name="" id="chonDiemChuan" class="py-2 px-2 round-0">
+            <!-- <option value="">--Chọn điểm chuẩn</option> -->
+            <option value="30">30</option>
+            <option value="28">28</option>
+            <option value="25">25</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="" class="mx-4">Chon khu vuc</label>
+          <select name="" id="chonKhuVuc" class="py-2 px-2 round-0">
+            <!-- <option value="">--Chọn khu vực</option> -->
+            <option value="2">A</option>
+            <option value="1">B</option>
+            <option value="0.5">C</option>
+            <option value="0">X</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="" class="mx-4">Chon doi tuong</label>
+          <select name="" id="chonDoiTuong" class="py-2 px-2 round-0">
+            <!-- <option value="">--Chọn đối tượng</option> -->
+            <option value="2.5">1</option>
+            <option value="1.5">2</option>
+            <option value="1">3</option>
+            <option value="0">0</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="">Diem mon 1</label>
+          <input type="text" class="form-control" id="mon1" />
+        </div>
+        <div class="mb-3">
+          <label for="">Diem mon 2</label>
+          <input type="text" class="form-control" id="mon2" />
+        </div>
+        <div class="mb-3">
+          <label for="">Diem mon 3</label>
+          <input type="text" class="form-control" id="mon3" />
+        </div>
+        <button
+          class="btn btn-success"
+          id="tinhTong"
+          onclick="tinhDiemTuyenSinh()"
+        >
+          Ket qua
+        </button>
+        <div
+          class="bg-success bg-opacity-75 p-2 text-white mt-3 diemTuyenSinh"
+        ></div>
+      </div>
+
+      <!-- bai 2 -->
+      <div class="container while">
+        <h2>Bài 2: Tính tiền điện</h2>
+        <div class="mb-3">
+          <label for="hoTen" class="mx-4">Nhập Họ tên</label>
+          <input type="text" class="form-control" id="hoTen" />
+        </div>
+        <div class="mb-3">
+          <label for="soDien" class="mx-4">Nhập số điện (số KW)</label>
+          <input type="text" class="form-control" id="soDien" />
+        </div>
+        <button
+          class="btn btn-danger"
+          id="tienDien"
+          onclick="tinhTienDien()"
+        >
+          Ket qua
+        </button>
+        <div
+          class="bg-danger bg-opacity-75 p-2 text-white mt-3 tienDien"
+        ></div>
+      </div>
+      <!-- bai 3 -->
+      <div class="container while">
+        <h2>Bài 3: Tính thuế thu nhập cá nhân</h2>
+        <div class="mb-3">
+          <label for="hoTenNguoiNopThue" class="mx-4">Nhập Họ tên</label>
+          <input type="text" class="form-control" id="hoTenNguoiNopThue" />
+        </div>
+        <div class="mb-3">
+          <label for="tongThuNhap" class="mx-4">Tổng thu nhập, nhập đủ chữ số 0</label>
+          <input type="text" class="form-control" id="tongThuNhap" />
+        </div>
+        <div class="mb-3">
+          <label for="nguoiPhuThuoc" class="mx-4">Tổng số người phụ thuộc</label>
+          <input type="text" class="form-control" id="nguoiPhuThuoc" />
+        </div>
+        <button
+          class="btn btn-success"
+          id="tienThue"
+          onclick="tinhTienThue()"
+        >
+          Ket qua
+        </button>
+        <div
+          class="bg-success bg-opacity-75 p-2 text-white mt-3 hienThiTienThue"
+        ></div>
+      </div>
+      <!-- bai 4 -->
+      <div class="container while">
+        <h2>Bài 4: Tính giá cáp</h2>
+        <select id="loaiHinhDN" onchange="HideShowConnectCell()">
+          <option value="nguoiDan">Người Dân</option>
+          <option value="doanhNghiep">Doanh nghiệp</option>
+        </select>
+        <div class="mb-3">
+          <label for="maKhachHang" class="mx-4">Nhập mã khách hàng</label>
+          <input type="text" class="form-control" id="maKhachHang" />
+        </div>
+        <div class="mb-3">
+          <label for="soKenhCaoCap" class="mx-4">Số kênh cao cấp</label>
+          <input type="text" class="form-control" id="soKenhCaoCap" />
+        </div>
+        <div class="mb-3" id="soKetNoiGroup" style="display: none;">
+          <label for="soKetNoi" class="mx-4">Số kết nối</label>
+          <input type="text" class="form-control" id="soKetNoi" />
+        </div>
+        <button
+          class="btn btn-danger"
+          id="tienThue"
+          onclick="tinhTienCap()"
+        >
+          Ket qua
+        </button>
+        <div
+          class="bg-danger bg-opacity-75 p-2 text-white mt-3 hienThiTienCap"
+        ></div>
+      </div>
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
